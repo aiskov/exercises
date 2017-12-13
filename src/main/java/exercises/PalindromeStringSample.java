@@ -1,9 +1,15 @@
 package exercises;
 
-public class PalindromStringSample implements PalindromString {
+public class PalindromeStringSample implements PalindromeString {
 
-    public boolean isPalindrom(String input) {
-        if (input == null || input.isEmpty() || input.trim().isEmpty()) {
+    public boolean isPalindrome(String input) {
+        if (input == null) {
+            return false;
+        }
+
+        input = input.trim().toLowerCase();
+
+        if (input.isEmpty()) {
             return false;
         }
 
